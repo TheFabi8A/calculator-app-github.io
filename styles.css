@@ -1,0 +1,284 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Spartan-Bold, sans-serif;
+}
+
+@font-face {
+    font-family: Spartan-Bold;
+    src: url("fonts/LeagueSpartan-Bold.ttf")format("truetype");
+}
+
+:root {
+    /* theme {1} */
+    --theme-1-bg-1: hsl(222deg 26% 31%);
+    --theme-1-bg-2: hsl(223deg 31% 20%);
+    --theme-1-bg-3: hsl(224deg 36% 15%);
+    --theme-1-key-1: hsl(225deg 21% 49%);
+    --theme-1-key-2: hsl(224deg 28% 35%);
+    --theme-1-key-3: hsl(6deg 63% 50%);
+    --theme-1-key-4: hsl(6deg 70% 34%);
+    --theme-1-key-5: hsl(30deg 25% 89%);
+    --theme-1-key-6: hsl(28deg 16% 65%);
+    --theme-1-text-1: hsl(221deg 14% 31%);
+    --theme-1-text-2: hsl(0deg 0% 100%);
+
+    /* theme {2} */
+    --theme-2-bg-1: hsl(0deg 0% 90%);
+    --theme-2-bg-2: hsl(0deg 5% 81%);
+    --theme-2-bg-3: hsl(0deg 0% 93%);
+    --theme-2-key-1: hsl(185deg 42% 37%);
+    --theme-2-key-2: hsl(185deg 58% 25%);
+    --theme-2-key-3: hsl(25deg 98% 40%);
+    --theme-2-key-4: hsl(25deg 99% 27%);
+    --theme-2-key-5: hsl(45deg 7% 89%);
+    --theme-2-key-6: hsl(35deg 11% 61%);
+    --theme-2-text-1: hsl(60deg 10% 19%);
+    --theme-2-text-2: hsl(0deg 0% 100%);
+
+    /* theme {3} */
+    --theme-3-bg-1: hsl(268deg 75% 9%);
+    --theme-3-bg-2: hsl(268deg 71% 12%);
+    --theme-3-key-1: hsl(281deg 89% 26%);
+    --theme-3-key-2: hsl(285deg 91% 52%);
+    --theme-3-key-3: hsl(176deg 100% 44%);
+    --theme-3-key-4: hsl(177deg 92% 70%);
+    --theme-3-key-5: hsl(268deg 47% 21%);
+    --theme-3-key-6: hsl(290deg 70% 36%);
+    --theme-3-text-1: hsl(52deg 100% 62%);
+    --theme-3-text-2: hsl(198deg 20% 13%);
+    --theme-3-text-3: hsl(0deg 0% 100%);
+}
+
+html {
+    display: grid;
+    place-items: center;
+}
+
+body {
+    padding: 1.5rem;
+}
+
+header {
+    padding-left: 0.5rem;
+    margin-top: 1.375rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+header > h1 {
+    position: relative;
+    top: -10px;
+    font-size: 1.9rem;
+}
+
+.container-theme {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.table-screen {
+    font-size: 2rem;
+    text-align: right;
+    margin: 1.625rem 0 1.5rem;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+}
+
+.text-screen {
+    font-size: 2.4rem;
+}
+
+.form-theme {
+    position: relative;
+}
+
+.input-range {
+    width: 4.5rem;
+    appearance: none;
+    background: none;
+}
+
+.input-range::-webkit-slider-runnable-track {
+    padding: 0.25em;
+    border-radius: 1em;
+}
+
+.input-range::-webkit-slider-thumb {
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.num-theme-container {
+    position: absolute;
+    top: -1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0.5rem;
+    font-size: 0.85rem;
+}
+
+.container-theme > h2 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.table-pad {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 0.8125rem;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+[class^="pad-btn"] {
+    padding-top: 0.35rem;
+    font-size: 2rem;
+    border-radius: 0.35rem;
+    border: none;
+    font-weight: 700;
+}
+
+[class^="pad-btn"]:active {
+    transform: translateY(0.35rem);
+    box-shadow: none;
+}
+
+[class^="pad-btn"]:hover {
+    cursor: pointer;
+    filter: brightness(1.5);
+}
+
+[class$="del"],
+[class$="reset"]{
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+.pad-btn-reset {
+    grid-column: 2 span;
+}
+
+.pad-btn-equal {
+    grid-column: 2 span;
+}
+
+@media screen and (prefers-color-scheme: light) {
+    h1 {
+        color: var(--theme-2-text-1);
+    }
+
+    h2 {
+        color: var(--theme-2-text-1);
+    }
+
+    .num-theme-container {
+        color: var(--theme-2-text-1);
+    }
+
+    body {
+        background-color: var(--theme-2-bg-1);
+    }
+
+    .table-screen {
+        background-color: var(--theme-2-bg-3);
+    }
+
+    .text-screen {
+        color: var(--theme-2-text-1);
+    }
+
+    .table-pad {
+        background-color: var(--theme-2-bg-2);
+    }
+
+    [class^="pad-btn"] {
+        color: var(--theme-2-text-1);
+        background-color: var(--theme-2-key-5);
+        box-shadow: 0 0.35rem 0 0 var(--theme-2-key-6);
+    }
+
+    [class$="del"],
+    [class$="reset"]{
+        background-color: var(--theme-2-key-1);
+        box-shadow: 0 0.35rem 0 0 var(--theme-2-key-2);
+        color: var(--theme-2-text-2);
+    }
+
+    .pad-btn-equal {
+        color: var(--theme-2-text-2);
+        background-color: var(--theme-2-key-3);
+        box-shadow: 0 0.35rem 0 0 var(--theme-2-key-4)
+    }
+
+    .input-range {
+        accent-color: var(--theme-2-key-3);
+    }
+
+    .input-range::-webkit-slider-runnable-track {
+        background-color: var(--theme-2-bg-2);
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    h1 {
+        color: var(--theme-3-text-1);
+    }
+
+    h2 {
+        color: var(--theme-3-text-1);
+    }
+
+    .num-theme-container {
+        color: var(--theme-3-text-1);
+    }
+
+    body {
+        background-color: var(--theme-3-bg-1);
+    }
+
+    .table-screen {
+        background-color: var(--theme-3-bg-2);
+    }
+
+    .text-screen {
+        color: var(--theme-3-text-1);
+    }
+
+    .table-pad {
+        background-color: var(--theme-3-bg-2);
+    }
+
+    [class^="pad-btn"] {
+        color: var(--theme-3-text-1);
+        background-color: var(--theme-3-key-5);
+        box-shadow: 0 0.35rem 0 0 var(--theme-3-key-6);
+    }
+
+    [class$="del"],
+    [class$="reset"]{
+        background-color: var(--theme-3-key-1);
+        box-shadow: 0 0.35rem 0 0 var(--theme-3-key-2);
+        color: var(--theme-3-text-3);
+    }
+
+    .pad-btn-equal {
+        color: var(--theme-3-text-2);
+        background-color: var(--theme-3-key-3);
+        box-shadow: 0 0.35rem 0 0 var(--theme-3-key-4)
+    }
+
+    .input-range {
+        accent-color: var(--theme-3-key-3);
+    }
+
+    .input-range::-webkit-slider-runnable-track {
+        background-color: var(--theme-3-bg-2);
+    }
+}
