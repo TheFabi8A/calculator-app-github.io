@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator App</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -30,24 +30,24 @@
             <p class="text-screen">399,981</p>
         </div>
         <form class="table-pad">
-            <input class="pad-btn-7" type="button" value="7">
-            <input class="pad-btn-8" type="button" value="8">
-            <input class="pad-btn-9" type="button" value="9">
-            <input class="pad-btn-del" type="button" value="del">
-            <input class="pad-btn-4" type="button" value="4">
-            <input class="pad-btn-5" type="button" value="5">
-            <input class="pad-btn-6" type="button" value="6">
-            <input class="pad-btn-add" type="button" value="+">
-            <input class="pad-btn-1" type="button" value="1">
-            <input class="pad-btn-2" type="button" value="2">
-            <input class="pad-btn-3" type="button" value="3">
-            <input class="pad-btn-substract" type="button" value="-">
-            <input class="pad-btn-dot" type="button" value=".">
-            <input class="pad-btn-0" type="button" value="0">
-            <input class="pad-btn-division" type="button" value="/">
-            <input class="pad-btn-multiplication" type="button" value="x">
-            <input class="pad-btn-reset" type="button" value="reset" id="btn-reset">
-            <input class="pad-btn-equal" type="button" value="=">
+            <input data-num="7" class="pad-btn-7" type="button" value="7" id="numpad7">
+            <input data-num="8" class="pad-btn-8" type="button" value="8">
+            <input data-num="9" class="pad-btn-9" type="button" value="9">
+            <input data-num="del" class="pad-btn-del" type="button" value="del">
+            <input data-num="4" class="pad-btn-4" type="button" value="4">
+            <input data-num="5" class="pad-btn-5" type="button" value="5">
+            <input data-num="6" class="pad-btn-6" type="button" value="6">
+            <input data-num="+" class="pad-btn-add" type="button" value="+">
+            <input data-num="1" class="pad-btn-1" type="button" value="1">
+            <input data-num="2" class="pad-btn-2" type="button" value="2">
+            <input data-num="3" class="pad-btn-3" type="button" value="3">
+            <input data-num="-" class="pad-btn-subtract" type="button" value="-">
+            <input data-num="." class="pad-btn-dot" type="button" value=".">
+            <input data-num="0" class="pad-btn-0" type="button" value="0">
+            <input data-num="/" class="pad-btn-divide" type="button" value="/">
+            <input data-num="x" class="pad-btn-multiply" type="button" value="x">
+            <input data-num="reset" class="pad-btn-reset" type="button" value="reset" id="btn-reset">
+            <input data-num="=" class="pad-btn-equal" type="button" value="=">
         </form>
     </main>
 </body>

@@ -138,6 +138,7 @@ header > h1 {
 }
 
 [class^="pad-btn"] {
+    position: relative;
     padding-top: 0.35rem;
     font-size: 2rem;
     border-radius: 0.35rem;
