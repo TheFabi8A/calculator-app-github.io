@@ -11,7 +11,8 @@
 }
 
 :root {
-    /* theme {1} */
+    --bg-input: hsl()
+        ;
     --theme-1-bg-1: hsl(222deg 26% 31%);
     --theme-1-bg-2: hsl(223deg 31% 20%);
     --theme-1-bg-3: hsl(224deg 36% 15%);
@@ -104,6 +105,7 @@ header > h1 {
 .input-range::-webkit-slider-runnable-track {
     padding: 0.25em;
     border-radius: 1em;
+    box-shadow: none;
 }
 
 .input-range::-webkit-slider-thumb {
@@ -148,7 +150,6 @@ header > h1 {
 
 [class^="pad-btn"]:active {
     transform: translateY(0.35rem);
-    box-shadow: none;
 }
 
 [class^="pad-btn"]:hover {
@@ -170,7 +171,11 @@ header > h1 {
     grid-column: 2 span;
 }
 
-@media screen and (prefers-color-scheme: light) {
+/* @media screen and (prefers-color-scheme: light) {
+    body {
+        background-color: var(--theme-2-bg-1);
+    }
+
     h1 {
         color: var(--theme-2-text-1);
     }
@@ -179,12 +184,14 @@ header > h1 {
         color: var(--theme-2-text-1);
     }
 
-    .num-theme-container {
+    [class^="pad-btn"] {
         color: var(--theme-2-text-1);
+        background-color: var(--theme-2-key-5);
+        box-shadow: 0 0.35rem 0 0 var(--theme-2-key-6);
     }
 
-    body {
-        background-color: var(--theme-2-bg-1);
+    .num-theme-container {
+        color: var(--theme-2-text-1);
     }
 
     .table-screen {
@@ -199,17 +206,11 @@ header > h1 {
         background-color: var(--theme-2-bg-2);
     }
 
-    [class^="pad-btn"] {
-        color: var(--theme-2-text-1);
-        background-color: var(--theme-2-key-5);
-        box-shadow: 0 0.35rem 0 0 var(--theme-2-key-6);
-    }
-
-    [class$="del"],
-    [class$="reset"]{
+    .pad-btn-del,
+    .pad-btn-reset{
+        color: var(--theme-2-text-2);
         background-color: var(--theme-2-key-1);
         box-shadow: 0 0.35rem 0 0 var(--theme-2-key-2);
-        color: var(--theme-2-text-2);
     }
 
     .pad-btn-equal {
@@ -225,9 +226,13 @@ header > h1 {
     .input-range::-webkit-slider-runnable-track {
         background-color: var(--theme-2-bg-2);
     }
-}
+} */
 
-@media screen and (prefers-color-scheme: dark) {
+/* @media screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--theme-3-bg-1);
+    }
+
     h1 {
         color: var(--theme-3-text-1);
     }
@@ -236,12 +241,14 @@ header > h1 {
         color: var(--theme-3-text-1);
     }
 
-    .num-theme-container {
+    [class^="pad-btn"] {
         color: var(--theme-3-text-1);
+        background-color: var(--theme-3-key-5);
+        box-shadow: 0 0.35rem 0 0 var(--theme-3-key-6);
     }
 
-    body {
-        background-color: var(--theme-3-bg-1);
+    .num-theme-container {
+        color: var(--theme-3-text-1);
     }
 
     .table-screen {
@@ -256,17 +263,11 @@ header > h1 {
         background-color: var(--theme-3-bg-2);
     }
 
-    [class^="pad-btn"] {
-        color: var(--theme-3-text-1);
-        background-color: var(--theme-3-key-5);
-        box-shadow: 0 0.35rem 0 0 var(--theme-3-key-6);
-    }
-
-    [class$="del"],
-    [class$="reset"]{
+    .pad-btn-del,
+    .pad-btn-reset{
+        color: var(--theme-3-text-3);
         background-color: var(--theme-3-key-1);
         box-shadow: 0 0.35rem 0 0 var(--theme-3-key-2);
-        color: var(--theme-3-text-3);
     }
 
     .pad-btn-equal {
@@ -282,4 +283,4 @@ header > h1 {
     .input-range::-webkit-slider-runnable-track {
         background-color: var(--theme-3-bg-2);
     }
-}
+} */
